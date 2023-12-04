@@ -1,6 +1,6 @@
 
 mod tests {
-    use crate::game_rules::{tetrix_rules::tetrix_rules::{new_session, game_over, form_line}, entities::{player::Player, game::Game}};
+    use crate::game_rules::{tetrix_rules::tetrix_rules::{new_session, game_over, form_line, generate_random_tetromino}, entities::{player::Player, game::Game}};
     fn tetris_core_test_startup() -> (Player, Game)
     {
         let new_session = new_session();
@@ -51,6 +51,18 @@ mod tests {
 
         let expected_high_score = 240;
         assert_eq!(session.0.high_score, expected_high_score);
+        
+    }
+    #[test]
+    fn generate_tetromino_test()
+    {
+        let tetromino = generate_random_tetromino();
+
+        let tetromino_expected_integers = vec![1, 2, 3, 4, 5, 6, 7];
+
+        let tetromino_contains_in_expected = tetromino_expected_integers.contains(&tetromino.tetromino_type);
+
+        assert_eq!(tetromino_contains_in_expected, true);
         
     }
 }

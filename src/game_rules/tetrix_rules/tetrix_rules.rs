@@ -36,7 +36,7 @@ pub fn form_line(mut current_game: Game) -> Game
 
 pub fn generate_random_tetromino() -> Tetromino {
     let mut rng = rand::thread_rng();
-    let random_8_bit_number: u8 = rng.gen();
+    let random_8_bit_number: u8 = rng.gen_range(1, 8);
     let tetromino = Tetromino {
         tetromino_type: random_8_bit_number,
     };

@@ -4,4 +4,6 @@ pub fn load_board(mut commands: Commands, asset_server: Res<AssetServer>) {
         texture: asset_server.load("tetromino/Board/Board.png"),
         ..default()
     });
+
+ 
 }

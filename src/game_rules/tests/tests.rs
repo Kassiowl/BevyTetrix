@@ -18,6 +18,7 @@ mod tests {
             next_piece: new_session.1.next_piece,
             current_piece: new_session.1.current_piece,
             current_score: 0,
+            is_current_piece_spawned: false
         });
         assert_eq!(new_session, expected_session);
         

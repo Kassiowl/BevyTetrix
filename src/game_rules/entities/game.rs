@@ -5,5 +5,6 @@ pub struct Game {
     pub game_over :bool,
     pub next_piece: Tetromino,
     pub current_piece: Tetromino,
-    pub current_score: u64
+    pub current_score: u64,
+    pub is_current_piece_spawned: bool
 }

@@ -54,7 +54,8 @@ pub fn new_session() -> (Player, Game)
         game_over : false,
         next_piece : generate_random_tetromino(),
         current_piece : generate_random_tetromino(),
-        current_score : 0
+        current_score : 0,
+        is_current_piece_spawned: false
     };
 
     (player, game)
